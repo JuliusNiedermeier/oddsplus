@@ -5,7 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --esm src/index.ts"
+    "dev": "ts-node --esm src/index.ts",
+    "watch": "nodemon --esm src/index.ts"
   },
   "devDependencies": {
     "@types/node": "^18.14.5",
