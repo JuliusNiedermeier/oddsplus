@@ -1,17 +1,12 @@
-import { fetchTipicoData } from "./fetchTipicoData.js";
-import { TipicoDataSchema } from "./types/index.js";
-import { diffJSON } from "./diffJSON.js";
+import { getCompetitions, getEvents, getSports } from "./normalize.js";
+import { streamData } from "./streamData.js";
 
-let previousResponse = {};
+const unsubscribe = streamData((data) =>
+  console.log({
+    sports: getSports(data).length,
+    competitions: getCompetitions(data).length,
+    events: getEvents(data).length,
+  })
+);
 
-const next = async () => {
-  fetchTipicoData().then((data) => {
-    TipicoDataSchema.parse(data);
-    const changes = diffJSON(previousResponse, data);
-    console.log("Found", changes.length, "changes");
-    previousResponse = data;
-    next();
-  });
-};
-
-next();
+setTimeout(unsubscribe, 10000);
