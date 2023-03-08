@@ -1,7 +1,7 @@
 import { z } from "zod";
+import { BaseNormalizedEntitySchema } from "./BaseNormalizedEntitySchema.js";
 
-export const EventSchema = z.object({
-  id: z.string(),
+export const EventSchema = BaseNormalizedEntitySchema.extend({
   competitionId: z.string(),
   name: z.string(),
   startTime: z.string().datetime(),
