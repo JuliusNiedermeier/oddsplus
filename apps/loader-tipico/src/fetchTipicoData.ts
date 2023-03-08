@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { TipicoData } from "./TipicoDataSchema.js";
+import { TipicoData } from "./types/index.js";
 
 const URL = "https://sports.tipico.de/json/program/selectedEvents/all/1101";
 

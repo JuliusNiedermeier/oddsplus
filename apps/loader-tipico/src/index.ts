@@ -1,5 +1,5 @@
 import { fetchTipicoData } from "./fetchTipicoData.js";
-import { TipicoDataSchema } from "./types/TipicoDataSchema.js";
+import { TipicoDataSchema } from "./types/index.js";
 import { diffJSON } from "./diffJSON.js";
 
 let previousResponse = {};
