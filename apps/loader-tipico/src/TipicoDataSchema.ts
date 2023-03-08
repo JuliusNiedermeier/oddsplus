@@ -56,6 +56,7 @@ export const TipicoDataSchema = z.object({
         eventStartTime: z.number(),
         midnightTime: z.number(),
         status: z.string(),
+        /** redCards [team1, team2] */
         redCards: z.union([z.tuple([z.string(), z.string()]), z.null()]),
         type: z.union([z.string(), z.null()]),
         date: z.string(),
