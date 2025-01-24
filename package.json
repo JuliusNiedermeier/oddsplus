@@ -1,14 +1,10 @@
 {
   "name": "oddsplus",
   "private": true,
-  "scripts": {
-    "dev": "turbo run dev"
-  },
+  "scripts": {},
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
-  "dependencies": {
-    "turbo": "^1.8.1"
-  }
+  "dependencies": {}
 }
