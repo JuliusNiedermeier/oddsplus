@@ -1,6 +1,10 @@
 {
   "name": "oddsplus",
   "private": true,
+  "type": "module",
   "scripts": {},
-  "dependencies": {}
+  "devDependencies": {
+    "@types/node": "^22.10.10",
+    "typescript": "^5.7.3"
+  }
 }
